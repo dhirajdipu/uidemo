@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Sorting Table</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://adhoc.npfs.co/css/college/fonts.css?1613143467"/>
+<link href="https://adhoc.npfs.co/css/college/bootstrap.min.css" rel="stylesheet">
+
+<!-- Only Add Below CSS in Our Projects -->
+<link href="css/sorting-table.css" rel="stylesheet">
+
+</head>
+<body>
+  
+<div class="columns_dragble">
+  <h4>Selected Your Prefrence <span>(Drag to reorder)</span></h4>
+  <div class="prefrence-list clearfix">
+    <ul class="list widget_dragable">
+      <li id="list1" title="You Can Move Up & Down"><i class="fa fa-university" aria-hidden="true"></i> Preference 1</li>
+      <li id="list2" title="You Can Move Up & Down"><i class="fa fa-university" aria-hidden="true"></i> Preference 2</li>
+      <li id="list3" title="You Can Move Up & Down"><i class="fa fa-university" aria-hidden="true"></i> Preference 3</li>
+      <li id="list4" title="You Can Move Up & Down"><i class="fa fa-university" aria-hidden="true"></i> Preference 4</li>
+      <li id="list5" title="You Can Move Up & Down"><i class="fa fa-university" aria-hidden="true"></i> Preference 4 </li>
+    </ul>
+  </div>
+</div>
+
+<script src="https://adhoc.npfs.co/js/lib/jquery.min.js?1613143468"></script>
+<script src="https://adhoc.npfs.co/js/college/bootstrap.min.js"></script>
+
+<!-- Only Add Below JS  &  Init for drag & drop -->
+<script src="js/touch-dnd.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('.widget_dragable').sortable().on('sortable:receive', function(e, ui) {
+      ui.item.removeClass('draggable')
+    })
+  })
+</script>
+</body>
+</html>
